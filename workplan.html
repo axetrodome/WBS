@@ -21,6 +21,7 @@
     .width{width:250px;}
     footer .copyright{position:absolute;}
 	footer .connections{text-align:center;display:inline-block;width:100%;letter-spacing:15px}
+    .container{width:95%;}
 </style>
 <body>
 <div class="btn">
@@ -317,24 +318,193 @@ programming tasks by 50%.</td>
 <div class="container">
     <h1>Functional Requirements:</h1>
     <h3>1. Search and Browse</h3>
-    <h4 style="padding-left:15px;">1.1 The system will allow alumni to browse events and announcements.</h4>
-    <h4 style="padding-left:15px;">1.2 The system will allow alumni to search for other alumni by name, address, and course.</h4>
-    <h4 style="padding-left:15px;">1.2 The system will allow alumni to view other alumni profile.</h4>
+    <h4 style="padding-left:15px;">1.1 The system will allow alumni to browse current  Informations.</h4>
+    <h4 style="padding-left:15px;">1.2 The system will allow alumni to search for the past and current Informations.</h4>
     <h3>2. Communication</h3>
-    <h4 style="padding-left:15px;">2.1 The system will allow alumni to participate in forum</h4>
-    <h4 style="padding-left:15px;">2.2 The system will enable alumni to select channel in forum</h4>
+    <h4 style="padding-left:15px;">2.1 The system will keep the alumni updated and well informed.</h4>
+    <h4 style="padding-left:15px;">2.2 The system will enable alumni to select and read the current or past activities of the school.</h4>
+    <h4 style="padding-left:15px;">2.3 The system will notify the users via email for new Upcoming events.</h4>
+    <h3>3.Events Management</h3>
+    <h4 style="padding-left:15px;">3.1 The System will Enable the Alumni coordinator to post new Informations.</h4>
     <h1>Non-Functional Requirements:</h1>
     <h3>1. Operate</h3>
-    <h4 style="padding-left:15px;">1.1 The Alumni System database will be constructed to facilitate searches by name, address, and events..</h4>
+    <h4 style="padding-left:15px;">1.1 The Alumni System database will be constructed to facilitate searches by news,events,articles</h4>
     <h4 style="padding-left:15px;">1.2 The system will run on any Web browsers.</h4>
-    <h4 style="padding-left:15px;">1.3 The system will allow alumni to view other alumni profile.</h4>
-    <h4 style="padding-left:15px;">1.4 The system will run on any Devices.</h4>
+    <h4 style="padding-left:15px;">1.3 The system will run on any Devices.</h4>
     <h3>2. Performance</h3>
     <h4 style="padding-left:15px;">2.1 The browsing speed will kept at an acceptable level.</h4>
     <h3>3. Security</h3>
-    <h4 style="padding-left:15px;">3.1 Alumni information will be secured.</h4>
+    <h4 style="padding-left:15px;">3.1 Alumni personal information will be secured and keep private.</h4>
     <h3>4. Cultural and Political</h3>
     <h4 style="padding-left:15px;">No special cultural and political requirements are expected.</h4>
+</div>
+<div class="container">
+    <h1>Use Cases</h1>
+    <table>
+        <tr>
+            <td><b>Use case name:</b> Search and Browse</td>
+            <td><b>ID:</b>UC-1</td>
+            <td><b>Priority:</b>High</td>
+        </tr>
+        <tr>
+            <td><b>Actor:</b> Alumni</td>
+        </tr>
+        <tr>
+            <td><b>Description:</b>This use case describes an Alumni who searches and browses through the system. </td>
+        </tr>
+        <tr>
+            <td><b>Trigger:</b> Alumni arrives at Web site to search and browse Information about current and past events</td>
+        </tr>
+        <tr>
+            <td><b>Type: </b><input type="checkbox" checked="">External <input type="checkbox">Temporal</td>
+        </tr>
+        <tr>
+            <td><b>Preconditions:</b> <p>Web site is available</p>
+<p>Alumni System database is on-line</p></td>
+        </tr>
+        <tr>
+            <td><b>Normal Course:</b>
+            <p>1.0 Search and browse news or events and select news or events to read.</p>
+            <p style="padding-left:10px">1. System displays default home page.</p>
+            <p style="padding-left:10px">2.Alumni student browses current Information about current events in school on page or enters account username and password.</p>
+            <p style="padding-left:10px">3. Alumni Student want to create an account:Perform create account use case.</p>
+            <p style="padding-left:10px">4. Alumni enters search request.</p>
+            <p style="padding-left:10px">5. System displays Latest Information about current and past events or Alumni Information that match search request </p>
+            <p style="padding-left:10px">6. Alumni Student selects an Information to read about current events</p>
+            <p style="padding-left:10px"></p>
+            </td>
+            <td><b>Information for Steps:</b>
+            <p></p>
+            <p>input 2 username/password</p>
+            <p>input 4 search criteria</p>
+            <p>input 5 Input Matching Search</p>
+            <p>Output 6 read Informations</p>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Alternative Courses:</b>
+                <p>1.1 Alumni has created an account (branch at step 1) </p>
+                <p style="padding-left:10px">1. System displays welcome message to account holder </p>
+            </td>
+            <td>Input 1.1 Users database</td>
+        </tr>
+        <tr>
+            <td><b>Postconditions:</b>
+                <p>The Alumni can now Access Alumni System Anytime</p>
+             </td>
+        </tr>
+        <tr>
+            <td>
+            <b>Sumarry Inputs</b>
+                <p>input 2 username/password</p>
+                <p>input 4 search criteria</p>
+                <p>input 5 Input Matching Search</p>
+                <p>Output 6 read Informations</p>
+            </td>
+            <td><b>Source</b>
+                <p>Alumni Student</p>
+                <p>Alumni Student</p>
+                <p>Alumni System database</p>
+            </td>
+            <td><b>Outputs</b>
+                <p>read Informations</p>
+            </td>
+            <td><b>Destination</b>
+                <p>Information databases</p>
+            </td>
+        </tr>
+    </table>        
+</div>
+<div class="container">
+    <table>
+        <tr>
+            <td><b>Use case name:</b>Communications</td>
+            <td><b>ID:</b>UC-2</td>
+            <td><b>Priority:</b>High</td>
+        </tr>
+        <tr>
+            <td><b>Actor:</b> Alumni Coordinator</td>
+        </tr>
+        <tr>
+            <td><b>Description:</b><p>This use case describes Alumni coordinator Managing informations and keeping the alumni updated.</p></td>
+        </tr>
+        <tr>
+            <td><b>Trigger:</b><p>The school has new News,Announcement,Events and Articles </p></td>
+        </tr>
+        <tr>
+            <td><b>Type: </b><input type="checkbox" checked="">External <input type="checkbox">Temporal</td>
+        </tr>
+        <tr>
+            <td><b>Preconditions:</b>
+                <p>The Alumni coordinator is Authenticated</p>
+                <p>The informations is ready to be viewed by the Alumni</p>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Normal Course:</b>
+                <p>1.0</p>
+            </td>
+            <td><b>Information for Steps:</b></td>
+        </tr>
+        <tr>
+            <td><b>Postconditions:</b></td>
+        </tr>
+        <tr>
+            <td><b>Sumarry Inputs</b></td>
+            <td><b>Source</b></td>
+            <td><b>Outputs</b></td>
+            <td><b>Destination</b></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>        
+</div>
+<div class="container">
+    <table>
+        <tr>
+            <td><b>Use case name:</b> Search and Browse</td>
+            <td><b>ID:</b>UC-3</td>
+            <td><b>Priority:</b>High</td>
+        </tr>
+        <tr>
+            <td><b>Actor:</b> Alumni Coordinator</td>
+        </tr>
+        <tr>
+            <td><b>Description:</b></td>
+        </tr>
+        <tr>
+            <td><b>Trigger:</b></td>
+        </tr>
+        <tr>
+            <td><b>Type:</b></td>
+        </tr>
+        <tr>
+            <td><b>Preconditions:</b></td>
+        </tr>
+        <tr>
+            <td><b>Normal Course:</b></td>
+            <td><b>Information for Steps:</b></td>
+        </tr>
+        <tr>
+            <td><b>Postconditions:</b></td>
+        </tr>
+        <tr>
+            <td><b>Sumarry Inputs</b></td>
+            <td><b>Source</b></td>
+            <td><b>Outputs</b></td>
+            <td><b>Destination</b></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>        
 </div>
 <footer>
 	<div class="copyright">&copy; 2017</div> 
@@ -345,3 +515,4 @@ programming tasks by 50%.</td>
 </footer>
 </body>
 </html>
+

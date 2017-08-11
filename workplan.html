@@ -326,6 +326,7 @@ programming tasks by 50%.</td>
     <h4 style="padding-left:15px;">2.3 The system will notify the users via email for new Upcoming events.</h4>
     <h3>3.Events Management</h3>
     <h4 style="padding-left:15px;">3.1 The System will Enable the Alumni coordinator to post new Informations.</h4>
+    <h4 style="padding-left:15px;">3.2 The System will Allow Alumni coordinator to Accept pending comments</h4>
     <h1>Non-Functional Requirements:</h1>
     <h3>1. Operate</h3>
     <h4 style="padding-left:15px;">1.1 The Alumni System database will be constructed to facilitate searches by news,events,articles</h4>
@@ -397,7 +398,7 @@ programming tasks by 50%.</td>
             <td>
             <b>Sumarry Inputs</b>
                 <p>input 2 username/password</p>
-                <p>input 4 search criteria</p>
+                <p>input 4 Search Criteria</p>
                 <p>input 5 Input Matching Search</p>
                 <p>Output 6 read Informations</p>
             </td>
@@ -423,50 +424,70 @@ programming tasks by 50%.</td>
             <td><b>Priority:</b>High</td>
         </tr>
         <tr>
-            <td><b>Actor:</b> Alumni Coordinator</td>
+            <td><b>Actor:</b> Alumni</td>
         </tr>
         <tr>
-            <td><b>Description:</b><p>This use case describes Alumni coordinator Managing informations and keeping the alumni updated.</p></td>
+            <td><b>Description:</b><p> This use case describes the Alumni Browse and read of selected News,Events,Announcement or Articles.</p></td>
         </tr>
         <tr>
-            <td><b>Trigger:</b><p>The school has new News,Announcement,Events and Articles </p></td>
+            <td><b>Trigger:</b> Alumni logged on the system and has an account.</td>
         </tr>
         <tr>
             <td><b>Type: </b><input type="checkbox" checked="">External <input type="checkbox">Temporal</td>
         </tr>
         <tr>
             <td><b>Preconditions:</b>
-                <p>The Alumni coordinator is Authenticated</p>
+                <p>The Alumni is Authenticated</p>
                 <p>The informations is ready to be viewed by the Alumni</p>
             </td>
         </tr>
         <tr>
             <td><b>Normal Course:</b>
-                <p>1.0</p>
+                <p>1. Enters Account Username and password</p>
+                <p>2. Alumni will select Categories</p>
+                <p>3. System will display Listed contents inside the choses category</p>
+                <p>4. Alumni will select one of the contents to read.</p>
+                <p>5. System will display full details about the selected content</p>
+                <p>6. The Alumni can leave a reply in the content.</p>
             </td>
-            <td><b>Information for Steps:</b></td>
+            <td><b>Information for Steps:</b>
+                <p>Input 1 Username/Password</p>
+                <p>Input 2 New category </p>
+                <p> Output 3 display contents</p>
+                <p></p>
+                <p>Output 5 display detailts</p>
+                <p>Output 6 Pending Comments</p>
+            </td>
         </tr>
         <tr>
-            <td><b>Postconditions:</b></td>
+            <td><b>Postconditions:</b>
+                <p>Pending Comments</p>
+            </td>
         </tr>
         <tr>
-            <td><b>Sumarry Inputs</b></td>
-            <td><b>Source</b></td>
-            <td><b>Outputs</b></td>
-            <td><b>Destination</b></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td><b>Sumarry Inputs</b>
+                <p>Username/Password</p>
+                <p>New category</p>
+            </td>
+            <td><b>Source</b>
+                <p>Alumni Student</p>
+                <p>Alumni System Database</p>
+            </td>
+            <td><b>Outputs</b>
+                <p>Display contents</p>
+                <p>Display detailts</p>
+                <p>Pending Comments</p>
+            </td>
+            <td><b>Destination</b>
+                <p>Information databases</p>
+            </td>
         </tr>
     </table>        
 </div>
 <div class="container">
     <table>
         <tr>
-            <td><b>Use case name:</b> Search and Browse</td>
+            <td><b>Use case name:</b> Event Management</td>
             <td><b>ID:</b>UC-3</td>
             <td><b>Priority:</b>High</td>
         </tr>
@@ -474,7 +495,7 @@ programming tasks by 50%.</td>
             <td><b>Actor:</b> Alumni Coordinator</td>
         </tr>
         <tr>
-            <td><b>Description:</b></td>
+            <td><b>Description:</b> This use case Describes</td>
         </tr>
         <tr>
             <td><b>Trigger:</b></td>
@@ -494,7 +515,9 @@ programming tasks by 50%.</td>
         </tr>
         <tr>
             <td><b>Sumarry Inputs</b></td>
-            <td><b>Source</b></td>
+            <td><b>Source</b>
+                <p></p>
+            </td>
             <td><b>Outputs</b></td>
             <td><b>Destination</b></td>
         </tr>

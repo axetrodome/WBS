@@ -558,38 +558,34 @@ programming tasks by 50%.</td>
             <td><b>Priority:</b>High</td>
         </tr>
         <tr>
-            <td><b>Actor:</b> Alumni</td>
+            <td><b>Actor:</b> User</td>
         </tr>
         <tr>
-            <td><b>Description:</b>This use case describes an Alumni who searches and browses through the system. </td>
+            <td><b>Description:</b>This use case describes an User who searches and browses through the system. </td>
         </tr>
         <tr>
-            <td><b>Trigger:</b> Alumni arrives at Web site to search and browse Information about current and past events</td>
+            <td><b>Trigger:</b> User arrives at Web site to search and browse Information about current and past events</td>
         </tr>
         <tr>
             <td><b>Type: </b><input type="checkbox" checked="">External <input type="checkbox">Temporal</td>
         </tr>
         <tr>
-            <td><b>Preconditions:</b> <p>Web site is available</p>
-<p>Alumni System database is on-line</p></td>
+            <td><b>Preconditions:</b> <p>The User is authenticated</p>
+                <p>New post is created</p></td>
         </tr>
         <tr>
             <td><b>Normal Course:</b>
-            <p>1.0 Search and browse news or events and select news or events to read.</p>
-            <p style="padding-left:10px">1. System displays default home page.</p>
-            <p style="padding-left:10px">2.Alumni student browses current Information about current events in school on page or enters account username and password.</p>
-            <p style="padding-left:10px">3. Alumni Student want to create an account:Perform create account use case.</p>
-            <p style="padding-left:10px">4. Alumni enters search request.</p>
-            <p style="padding-left:10px">5. System displays Latest Information about current and past events or Alumni Information that match search request </p>
-            <p style="padding-left:10px">6. Alumni Student selects an Information to read about current events</p>
-            <p style="padding-left:10px"></p>
+                <p>1.0 Search and browse news or events and select news or events to read.</p>
+                <p style="padding-left:10px">1. System displays new post Annoucement.</p>
+                <p style="padding-left:10px">2. The user wants to search Annoucements or Users</p>
+                <p style="padding-left:10px">3. System display matching request</p>
+                <p style="padding-left:10px">4. User selects an Annoucement or User to view it the details</p>
             </td>
             <td><b>Information for Steps:</b>
-            <p></p>
-            <p>input 2 username/password</p>
-            <p>input 4 search criteria</p>
-            <p>input 5 Input Matching Search</p>
-            <p>Output 6 read Announcements</p>
+            <p>Output 1 Display Annoucements</p>
+            <p>Input 2 search criteria</p>
+            <p>Output 3 Input Matching Search</p>
+            <p>Output 4 read Announcements</p>
             </td>
         </tr>
         <tr>
@@ -601,27 +597,26 @@ programming tasks by 50%.</td>
         </tr>
         <tr>
             <td><b>Postconditions:</b>
-                <p>The Alumni can now Access Alumni System Anytime</p>
+                <p>Search history recorded</p>
              </td>
         </tr>
         <tr>
             <td>
             <b>Sumarry Inputs</b>
-                <p>input 2 username/password</p>
                 <p>input 4 Search Criteria</p>
-                <p>input 5 Input Matching Search</p>
-                <p>Output 6 read Announcements</p>
             </td>
             <td><b>Source</b>
-                <p>Alumni Student</p>
-                <p>Alumni Student</p>
-                <p>Alumni System database</p>
+                <p>User</p>
             </td>
             <td><b>Outputs</b>
-                <p>read Announcements</p>
+                <p>Output 2 Display Annoucements</p>
+                <p>Output 5 Input Matching Search</p>
+                <p>Output 6 read Announcements</p>
             </td>
             <td><b>Destination</b>
-                <p>Information databases</p>
+                <p>Announcement database</p>
+                <p>Announcement database</p>
+                <p>Announcement database</p>
             </td>
         </tr>
     </table>        

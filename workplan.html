@@ -406,7 +406,7 @@ programming tasks by 50%.</td>
     <h4 style="padding-left:15px;">1.3 The system will notify the users via email for new Upcoming events,Important news and Job offers related to their field.</h4>
     <h3>2. Admin management</h3>
     <h4 style="padding-left:15px;">2.1 The system will allow Admin to add and remove co-admin.</h4>
-    <h3>3. User</h3>
+    <h3>3. Create Account</h3>
     <h4 style="padding-left:15px;">3.1 The system will allow Users to login and Register.</h4>
     <h4 style="padding-left:15px;">3.2 The system will allow Users to Edit Personal information.</h4>
     <h3>4. Search and Browse</h3>
@@ -519,66 +519,75 @@ programming tasks by 50%.</td>
 <div class="container">
     <table>
         <tr>
-            <td><b>Use case name:</b>Event,Job  Management</td>
+            <td><b>Use case name:</b>Create Account</td>
             <td><b>ID:</b>UC-2</td>
             <td><b>Priority:</b>High</td>
         </tr>
         <tr>
-            <td><b>Actor:</b> Admin</td>
+            <td><b>Actor:</b> User</td>
         </tr>
         <tr>
             <td><b>Description:</b> This use case Describes on how the User will Create and Manage account.</td>
         </tr>
         <tr>
-            <td><b>Trigger:</b> The User want to know the happenings in the school</td>
+            <td><b>Trigger:</b> The User want to be registered alumni and want know the happenings in the school.</td>
         </tr>
         <tr>
             <td><b>Type:</b>External <input type="checkbox" name="checkbox" checked>Temporal <input type="checkbox" name="checkbox"></td>
         </tr>
         <tr>
-            <td><b>Preconditions:</b><br>The new notification is the users notification bar <br>The post is ready to be viewed</td>
+            <td><b>Preconditions:</b><br>The posts is ready to be viewed</td>
         </tr>
         <tr>
             <td><b>Normal Course:</b>
-                <p>1. The system will display homepage</p>
-                <p>2. The user will enter username/password</p>
-                <p>3. The user wants to create and account:redirect to register page</p>
-                <p>4. The user will fillup all the fields</p>
-                <p>5. The user want to view own profile</p>
-                <p>6. the user want to edit profile</p>
+                <p>1. The system will display register page</p>
+                <p>2. The user needs to fill the required fields.</p>
+                <p>3. The user need to pay via paypal to complete registration</p>
+                <p>4.If payment is done.</p>
+                <p style="padding-left:10px;">a. Display the user basic information</p>
+                <p  style="padding-left:10px">b. User account added</p>
+                <p  style="padding-left:10px">c. The user will automatically logged in</p>
             </td>
             <td><b>Information for Steps:</b>
-                <p>(input 2) username/password</p>
-                <p>(input 4) fillup all required fields</p>
-                <p>(Output 5) show user information</p>
-                <p>(Output 6) Modified profile</p>
+                <p>(input 2) register fields</p>
+                <p>(input 3) payments</p>
+                <p>(Output a) show user basic information</p>
+                <p>(Output b) Account added</p>
+                <p>Account added</p>
+            </td>
+        </tr>
+        <tr>
+           <td><b>Exceptions:</b><br>
+                <p> E1: Required fields (occurs at step 2)</p>
+                <p>1. System displays message that the required field should not be empty.</p>
+                <p> E2: Unique username (occurs at step 2)</p>
+                <p>1. System displays message that the username already exists if the user Input same username with other users.</p>
             </td>
         </tr>
         <tr>
             <td><b>Postconditions:</b>
                 <p>The user account is stored in database</p>
-                <p>The the user is ready to view announcements</p>
+                <p>The the user is ready to view posts</p>
             </td>
         </tr>
         <tr>
             <td><b>Sumarry Inputs</b>
-                <p>username/password</p>
-                <p>fillup all required fields</p>
+                <p>required fields</p>
+                <p>(input 3) payments</p>
             </td>
             <td><b>Source</b>
                 <p>User</p> 
                 <p>User</p>
             </td>
             <td><b>Outputs</b>
-                <p>Show user information</p>
-                <p>Modified profile</p>
+                <p>Show user basic information</p>
+                <p> Account added</p>
             </td>
             <td><b>Destination</b>
                 <p>Users database</p>
                 <p>Users database</p>
             </td>
         </tr>
-
     </table>        
 </div>
 <div class="container">

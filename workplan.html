@@ -8,21 +8,64 @@
 </head>
 <style type="text/css">
 *{margin:0;padding:0;word-break:break-word;font-family:'AvantGarde','Century Gothic','Apple Gothic',sans-serif;}
-	.container{width:95%;margin:auto;padding:15px;}
-	h1{letter-spacing:2px;}
-	table{width:100%;border-collapse:collapse;border:1px solid #2980b9;font-size:13px;}
-	table th,table td{padding:8px 15px;}
-	table th{background-color:#2980b9;color:#fff}
-	tr:nth-child(even){background-color:#ddd}
-	table th{border:1px solid #fff;border-collapse:collapse;}
-	footer{background-color:#333;color:#777;font-size:18px;width:100%;padding:15px;}
-	footer i{text-align:center;}
-    footer a{color:#777}
-	.days{text-align:center;}
-    .width{width:250px;}
-    footer .copyright{position:absolute;}
-	footer .connections{text-align:center;display:inline-block;width:100%;letter-spacing:15px}
-    .container{width:95%;}
+	.container{
+        width:95%;
+        margin:auto;
+        padding:15px;
+    }
+	h1{
+        letter-spacing:2px;
+    }
+	table{
+        width:100%;
+        border-collapse:collapse
+        ;border:1px solid #2980b9;
+        font-size:13px;
+    }
+	table th,table td{
+        padding:8px 15px;
+    }
+	table th{
+        background-color:#2980b9;
+        color:#fff
+    }
+	tr:nth-child(even){
+        background-color:#ddd
+    }
+	table th{
+        border:1px solid #fff;
+        border-collapse:collapse;
+    }
+	footer{
+        background-color:#333;
+        color:#777;
+        font-size:18px;
+        width:100%;padding:15px;
+    }
+	footer i{
+        text-align:center;
+    }
+    footer a{
+        color:#777;
+    }
+	.days{
+        text-align:center;
+    }
+    .width{
+        width:250px;
+    }
+    footer .copyright{
+        position:absolute;
+    }
+	footer .connections{
+        text-align:center;
+        display:inline-block;
+        width:100%;
+        letter-spacing:15px;
+    }
+    .container{
+        width:95%;
+    }
     img{
         width:300px;
         height:300px;
@@ -445,7 +488,7 @@ programming tasks by 50%.</td>
             <td><b>Priority:</b>High</td>
         </tr>
         <tr>
-            <td><b>Actor:</b> Admins</td>
+            <td><b>Actor:</b> Admin</td>
         </tr>
         <tr>
             <td><b>Description:</b> This use case Describes on how the Admin Manage Informations</td>
@@ -462,20 +505,22 @@ programming tasks by 50%.</td>
         <tr>
             <td><b>Normal Course:</b><br>
                <p>1. The System will display homepage.</p>
-               <p>2. The system User will enter username/password</p>
-               <p>3. The User wants to create account:perform Create account use case</p>
-               <p>4. The System will detect if the Current logged in is Admin or Registered User</p>
-               <p>5. The System will Add and Display some functionality if the detected user is Admin.</p>
-               <p>6. The Admin will Specifies what to post in the dropdown menu Projects,News,Activities,Job offers.</p>
-               <p>7. The System will redirect admin in WYSIWYG (What You See Is What You Get) editor after selecting in Menu. </p>
-               <p>8. The Admin can add image in the Editor and Add attributes in the texts. </p>
-               <p>9. The New Post is created and the system will Notify users.</p> 
-               <p>10. The Admin selects post to Edit:perform edit use case</p>.
+               <p>2. The system Admin will enter username/password</p>
+               <p>3. The System will detect if the Current logged in is Admin or Registered User</p>
+               <p>4. The System will Add and Display some functionality if the detected user is Admin.</p>
+               <p>5. The Admin will Specifies what to post in the dropdown menu Projects,News,Activities,Job offers.</p>
+               <p>6. The System will redirect admin in WYSIWYG (What You See Is What You Get) editor after selecting 
+                     in Menu. </p>
+               <p>7. The Admin can add image in the Editor and Add attributes in the texts. </p>
+               <p>8. The New Post is created and the system will Notify users.</p> 
+               <p>9. The Admin selects post to Edit:perform edit use case</p>.
             </td>
             <td><b>Information for Steps:</b>
                 <p>(Input 2) username/password</p>
-                <p>(Input 8) text,Images</p>
-                <p>(Output 9) New post</p>
+                <p>(Input 7) text,Images</p>
+                <p>(Output 8) New post</p>
+                <p>(Input E2 1) Admin cancels post.</p>
+                <p>(Input E2 2)confirm cancelation.</p>
             </td>
         </tr>
         <tr>
@@ -493,15 +538,20 @@ programming tasks by 50%.</td>
         </tr>
         <tr>
            <td><b>Exceptions:</b><br>
-                <p> E1: Account is not valid (occurs at step 2)</p>
-                <p>1. System displays message that username/password is not valid.</p>
+                <p>E1: Account is not valid (occurs at step 2)</p>
+                <p>1. System displays message that username or password is not valid.</p>
                 <p>2. System asks User to re-enter username/password.</p>
+                <p>E2: Admin cancel the post</p>
+                <p>1.Admin cancels post.</p>
+                <p>2. The admin confirm cancel.</p>
             </td>
         </tr>
         <tr>
             <td><b>Sumarry Inputs</b>
-                <p>(Input 2) username/password</p>
-                <p>(Input 8) text,Images</p>
+                <p> username/password</p>
+                <p> text,Images</p>
+                <p> Admin cancels post.</p>
+                <p> confirm cancelation.</p>
             </td>
             <td><b>Source</b>
                 <p>Admin</p>
@@ -519,128 +569,57 @@ programming tasks by 50%.</td>
 <div class="container">
     <table>
         <tr>
-            <td><b>Use case name:</b>Create Account</td>
+            <td><b>Use case name:</b> Admin Management</td>
             <td><b>ID:</b>UC-2</td>
             <td><b>Priority:</b>High</td>
         </tr>
         <tr>
-            <td><b>Actor:</b> User</td>
+            <td><b>Actor:</b>Admin</td>
         </tr>
         <tr>
-            <td><b>Description:</b> This use case Describes on how the User will Create and Manage account.</td>
+            <td><b>Description:</b><p> This use case describe on how the Admin add another co-admin.</p></td>
         </tr>
         <tr>
-            <td><b>Trigger:</b> The User want to be registered alumni and want know the happenings in the school.</td>
-        </tr>
-        <tr>
-            <td><b>Type:</b>External <input type="checkbox" name="checkbox" checked>Temporal <input type="checkbox" name="checkbox"></td>
-        </tr>
-        <tr>
-            <td><b>Preconditions:</b><br>The posts is ready to be viewed</td>
-        </tr>
-        <tr>
-            <td><b>Normal Course:</b>
-                <p>1. The system will display register page</p>
-                <p>2. The user needs to fill the required fields.</p>
-                <p>3. The user need to pay via paypal to complete registration</p>
-                <p>4.If payment is done.</p>
-                <p style="padding-left:10px;">a. Display the user basic information</p>
-                <p  style="padding-left:10px">b. User account added</p>
-                <p  style="padding-left:10px">c. The user will automatically logged in</p>
-            </td>
-            <td><b>Information for Steps:</b>
-                <p>(input 2) register fields</p>
-                <p>(input 3) payments</p>
-                <p>(Output a) show user basic information</p>
-                <p>(Output b) Account added</p>
-                <p>Account added</p>
-            </td>
-        </tr>
-        <tr>
-           <td><b>Exceptions:</b><br>
-                <p> E1: Required fields (occurs at step 2)</p>
-                <p>1. System displays message that the required field should not be empty.</p>
-                <p> E2: Unique username (occurs at step 2)</p>
-                <p>1. System displays message that the username already exists if the user Input same username with other users.</p>
-            </td>
-        </tr>
-        <tr>
-            <td><b>Postconditions:</b>
-                <p>The user account is stored in database</p>
-                <p>The the user is ready to view posts</p>
-            </td>
-        </tr>
-        <tr>
-            <td><b>Sumarry Inputs</b>
-                <p>required fields</p>
-                <p>(input 3) payments</p>
-            </td>
-            <td><b>Source</b>
-                <p>User</p> 
-                <p>User</p>
-            </td>
-            <td><b>Outputs</b>
-                <p>Show user basic information</p>
-                <p> Account added</p>
-            </td>
-            <td><b>Destination</b>
-                <p>Users database</p>
-                <p>Users database</p>
-            </td>
-        </tr>
-    </table>        
-</div>
-<div class="container">
-    <table>
-        <tr>
-            <td><b>Use case name:</b> Communications</td>
-            <td><b>ID:</b>UC-3</td>
-            <td><b>Priority:</b>High</td>
-        </tr>
-        <tr>
-            <td><b>Actor:</b> Alumni</td>
-        </tr>
-        <tr>
-            <td><b>Description:</b><p> This use case describes the Users Browse and read of selected Announcement</p></td>
-        </tr>
-        <tr>
-            <td><b>Trigger:</b> User logged on the system and has an account.</td>
+            <td><b>Trigger:</b> The Admin clicked the Add admin.</td>
         </tr>
         <tr>
             <td><b>Type: </b><input type="checkbox" checked="">External <input type="checkbox">Temporal</td>
         </tr>
         <tr>
             <td><b>Preconditions:</b>
-                <p>The User is Authenticated</p>
-                <p>Notification is sent to all users</p>
+                <p>The Admin is Authenticated</p>
             </td>
         </tr>
         <tr>
             <td><b>Normal Course:</b>
-                <p>1. Enters Account Username and password</p>
-                <p>2. User will Open Notification</p>
-                <p>3. System will display current Annoucements</p>
-                <p>4. User will select one of the Announcements to read.</p>
-                <p>5. System will display full details about the selected Announcement</p>
-                <p>6. The User can leave a comment in the content.</p>
+                <p>1. The system will display list of co-admins.</p>
+                <p>2. The System display 3 actions in the left side of co-admins list</p>
+                <p>4. Remove: Remove the power of co-admin</p>
+                <p>5. Edit: Edit Details of co-admin</p>
+                <p>6. View: View Details of co-admin</p>
+                <p>7. The Admin Add a new co-admin.</p>
+                <p>8. The System will check if the username and name is unique</p>
+                <p>9. The System will display Basic information of the new co-admin</p>
             </td>
-            <td><b>Information for Steps:</b>
-                <p>Input 1 Username/Password</p>
-                <p>Output 2 Display notification </p>
-                <p>Output 3 display contents</p>
-                <p>Output 5 display detailts</p>
-                <p>Input 6 Pending Comments</p>
+            <td>
+                <b>Information for Steps:</b>
+                <p>(Input 4) Remove permission</p>
+                <p>(Input 5) Modified information</p>
+                <p>(Input 6) Display details</p>
             </td>
         </tr>
         <tr>
-            <td><b>Postconditions:</b>
-                <p>Pending Comments</p>
+            <td>
+                <b>Postconditions:</b><br>
+                <p>New co-admin added</p>
             </td>
         </tr>
         <tr>
             <td><b>Sumarry Inputs</b>
-                <p>Username/Password</p>
-                <p>Display notifications</p>
+                <p>Remove permission</p>
+                <p>Modified information</p>
+                <p>Display details</p>
+                
             </td>
             <td><b>Source</b>
                 <p>User Student</p>
@@ -660,63 +639,246 @@ programming tasks by 50%.</td>
 <div class="container">
     <table>
         <tr>
-            <td><b>Use case name:</b> Search and Browse</td>
-            <td><b>ID:</b>UC-4</td>
+            <td><b>Use case name:</b>Create Account</td>
+            <td><b>ID:</b>UC-3</td>
             <td><b>Priority:</b>High</td>
         </tr>
         <tr>
             <td><b>Actor:</b> User</td>
         </tr>
         <tr>
-            <td><b>Description:</b>This use case describes an User who searches and browses through the system. </td>
+            <td><b>Description:</b> This use case Describes on how the User will Create and Manage account.</td>
         </tr>
         <tr>
-            <td><b>Trigger:</b> User arrives at Web site to search and browse Information about current and past events</td>
+            <td><b>Trigger:</b> The User want to be registered alumni and want know the happenings in the school.</td>
+        </tr>
+        <tr>
+            <td><b>Type:</b>External <input type="checkbox" name="checkbox" checked>Temporal <input type="checkbox" name="checkbox"></td>
+        </tr>
+        <tr>
+            <td><b>Preconditions:</b><br>The posts is ready to be viewed <br>The User specified readiness to register </td>
+        </tr>
+        <tr>
+            <td><b>Normal Course:</b>
+                <p>1. The system will display register page</p>
+                <p>2. The User will fill-up all the required fields.(personal details,Degree/s Obtained in CSCQC,Employment Detaileds, Account Details)</p>
+                <p>3. System collects payment information or account information</p>
+                <p>4. System obtains payment authorization.</p>
+                <p>5. Payment acceptance</p>
+                <p>6. The user confirms payment transaction </p>
+                <p>7. The System confirms payment acceptance</p>
+                <p>8. The System displays User profile</p>
+                <p>9. The User select Update profile or Update Settings</p>
+            </td>
+            <td><b>Information for Steps:</b>
+                <p>(Input 2) User Information</p>
+                <p>(input 3) Payment information</p>
+                <p>(input 4) Payment authorization</p>
+                <p>(input 5) Payment confirmation</p>
+                <p>(input 7) payment acceptance</p>
+                <p>(Output 8) User profile</p>
+                <p>(Input 9) Modified profile</p>
+            </td>
+        </tr>
+        <tr>
+           <td><b>Exceptions:</b><br>
+                <p> E1: Required fields (occurs at step 2)</p>
+                <p>1. System displays message that the required field should not be empty.</p>
+                <p>2. System displays message that the username already exists if the user Input same username with other users.</p>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Postconditions:</b>
+                <p>The user account is stored in database</p>
+                <p>Transaction is recorded</p>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Sumarry Inputs</b>
+                <p>required Fields</p>
+                <p>(input 3) Payment information</p>
+                <p>(input 4) Payment authorization</p>
+                <p>(input 5) Payment confirmation</p>
+                <p>(input 7)payment acceptance</p>
+            </td>
+            <td><b>Source</b>
+                <p>User</p> 
+                <p>User</p>
+            </td>
+            <td><b>Outputs</b>
+                <p>User profile</p>
+            </td>
+            <td><b>Destination</b>
+                <p>Users database</p>
+            </td>
+        </tr>
+    </table>        
+</div>
+<div class="container">
+    <table>
+        <tr>
+            <td>
+                <b>Use case name:</b> Search and Browse
+            </td>
+            <td>
+                <b>ID:</b>UC-4
+            </td>
+            <td>
+                <b>Priority:</b>High
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Actor:</b> User and Guests
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Description:</b>
+                This use case describes User who search and browses through the system.
+             </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Trigger:</b> User arrives at Web site to search and browse Information about current and past News,Events
+            </td>
         </tr>
         <tr>
             <td><b>Type: </b><input type="checkbox" checked="">External <input type="checkbox">Temporal</td>
         </tr>
         <tr>
-            <td><b>Preconditions:</b> <p>The User is authenticated</p>
-                <p>New post is created</p></td>
+            <td>
+                <b>Preconditions:</b>
+                <p>The User is authenticated</p>
+                <p>Alumni portal database is on-line</p>
+            </td>
         </tr>
         <tr>
             <td><b>Normal Course:</b>
-                <p>1.0 Search and browse news or events and select news or events to read.</p>
-                <p style="padding-left:10px">1. System displays new post Annoucement.</p>
-                <p style="padding-left:10px">2. The user wants to search Annoucements or Users</p>
-                <p style="padding-left:10px">3. System display matching request</p>
-                <p style="padding-left:10px">4. User selects an Annoucement or User to view it the details</p>
+                <p></p>
+                <p>1. The System will display homepage.</p>
+                <p>2. User browses posts on page or enters account username and password</p>
+                <p>3. User want to create an account: perform Create Account use case</p>
+                <p>4. User enters search request</p>
+                <p>5. System displays Posts matching search request </p>
+                <p>6. User selects a post to read. </p>
+                <p>7. The User can leave a comment inside the post.</p>
             </td>
             <td><b>Information for Steps:</b>
-            <p>Output 1 Display Annoucements</p>
-            <p>Input 2 search criteria</p>
-            <p>Output 3 Input Matching Search</p>
-            <p>Output 4 read Announcements</p>
+                <p>(Input 2) username/password</p>
+                <p>(Input 4) Search criteria</p>
+                <p>(Input 5) Display match request </p>
+                <p>(Output 6) Display full Information</p>
             </td>
         </tr>
         <tr>
             <td><b>Postconditions:</b>
                 <p>Search history recorded</p>
+                <p>pending comment</p>
              </td>
         </tr>
         <tr>
             <td>
+                <b>Exceptions</b><br>
+                <p> E1: Account is not valid (occurs at step 2)</p>
+                <p>1. System displays message that username/password is not valid.</p>
+                <p>2. System asks Tune Shopper to re-enter username/password.</p>
+                <p> E2: Search request returns no results (occurs at step 3)</p>
+                <p>1. System displays message that no results were found for that search</p>
+                <p>2. System asks User to try another search</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
             <b>Sumarry Inputs</b>
-                <p>input 4 Search Criteria</p>
+                <p>username/password</p>
+                <p>Search criteria</p>
+                <p>Display match request </p>
             </td>
             <td><b>Source</b>
                 <p>User</p>
             </td>
             <td><b>Outputs</b>
-                <p>Output 2 Display Annoucements</p>
-                <p>Output 5 Input Matching Search</p>
-                <p>Output 6 read Announcements</p>
+                <p> Display Full Info</p>
             </td>
             <td><b>Destination</b>
-                <p>Announcement database</p>
-                <p>Announcement database</p>
-                <p>Announcement database</p>
+                <p>Post database</p>
+            </td>
+        </tr>
+    </table>        
+</div>
+<div class="container">
+    <table>
+        <tr>
+            <td><b>Use case name:</b> Edit posts</td>
+            <td><b>ID:</b>UC-5</td>
+            <td><b>Priority:</b>High</td>
+        </tr>
+        <tr>
+            <td><b>Actor:</b> Admin</td>
+        </tr>
+        <tr>
+            <td><b>Description:</b><p> This use case describes the Users Browse and read of selected Announcement</p></td>
+        </tr>
+        <tr>
+            <td><b>Trigger:</b>Admin clicked the edit post</td>
+        </tr>
+        <tr>
+            <td><b>Type: </b><input type="checkbox" checked="">External <input type="checkbox">Temporal</td>
+        </tr>
+        <tr>
+            <td><b>Preconditions:</b>
+                <p>The Admin is Authenticated</p>
+                <p>Post database is on-line</p>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Normal Course:</b>
+                <p>1. The System will display list of posts</p>
+                <p>2. The Admin will select post to edit</p>
+                <p>3. The system will redirect Admin in Edit page</p>
+                <p>4. The admin Modify the content and can select Option if cancelation or rescheduling.</p>
+                <p>5. If cancelation</p>
+                <p style="padding-left:10px">a.  The system prompts the Admin to provide a reason for the rescheduling.</p>
+                <p style="padding-left:10px">b. Display canceled events in the homepage for guest.</p>
+                <p style="padding-left:10px">c. Notify the users for cancelation</p>
+                <p>6. If Rescheduling</p>
+                <p style="padding-left:10px">a.  The system prompts the Admin to provide a reason for the rescheduling.</p>
+                <p style="padding-left:10px">b. Display rescheduled events in the homepage for guests.</p>
+                <p style="padding-left:10px">c. Notify the users for the new schedule</p>
+            </td>
+            <td><b>Information for Steps:</b>
+                <p>Input a cancelation reason</p>
+                <p>Output b Canceled</p>
+                <p>Output c New canceled Event </p>
+                <p>Input a rescheduling reason</p>
+                <p>Output b Pending Comments</p>
+                <p>Output c New rescheduled Event</p>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Postconditions:</b>
+                <p>Notification sent</p>
+                <p>Post is modified</p>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Sumarry Inputs</b>
+                <p>Input a cancelation reason</p>
+                <p>Input a rescheduling reason</p>
+            </td>
+            <td><b>Source</b>
+                <p>User Student</p>
+                <p>Alumni System Database</p>
+            </td>
+            <td><b>Outputs</b>
+                <p>Output b Canceled</p>
+                <p>Output c New canceled Event </p>
+                <p>Output b Pending Comments</p>
+                <p>Output c New rescheduled Event</p>
+            </td>
+            <td><b>Destination</b>
+                <p>Post databases</p>
             </td>
         </tr>
     </table>        
@@ -800,6 +962,18 @@ programming tasks by 50%.</td>
             </div>
             <div>
                 <img src="images/events_pup.JPG">
+            </div>
+            <div>
+                Alumni profile
+            </div>
+            <div>
+                <img src="images/profile.JPG">
+            </div>
+            <div>
+                Alumni Settings
+            </div>
+            <div>
+                <img src="images/settings.JPG">
             </div>
     </div>
 </div>

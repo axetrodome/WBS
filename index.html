@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ortene</title>
+</head>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<style type="text/css">
+	*{
+		font-family: "AvantGarde","Apple Gothic","Century Gothic",sans-serif;
+	}
+	div{
+		text-align: center;
+		text-transform:uppercase;
+		color:#fff;
+		position:absolute;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+		font-size:25px;
+		letter-spacing:6px;
+		font-weight:bold;
+	}
+	h1{
+		text-decoration:overline;
+	}
+	html,body{
+		background-color:#2c3e50;
+		letter-spacing:2px; 
+	}
+	.hover{
+		position:relative;
+		display:block;
+		cursor:pointer;
+	}
+	.hover:before,.hover:after{
+		content:'';
+		position:absolute;
+		width:0%;
+		height:2px;
+		top:50%;
+		margin-top:-0.5px;
+		background:#fff;
+	}
+	.hover:before{
+		left:-2.5px;
+	}
+	.hover:after{
+		right:2.5px;
+		background:#fff;
+		transition:width 0.8s cubic-bezier(0.22,0.61,0.36,1);
+	}
+	.hover:hover:before{
+		background:#fff;
+		width:100%;
+		transition:width 0.5s cubic-bezier(0.22,0.61,0.36,1);
+	}
+	.hover:hover:after{
+		background:transparent;
+		width:100%;
+		transition:0s;
+	}
+	.red{
+		color:#c0392b;
+	}
+	.pepper{
+		color: #27ae60;
+	}
+	.courtesy{
+		color: #7f8c8d;
+	}
+	.chef{
+		letter-spacing:4px;
+		font-size:15px;
+		color:#c0392b;
+	}
+	.motto{
+		letter-spacing:4px;
+		font-size:20px;
+		color:#f1c40f;
+		text-decoration: underline;
+	}
+	.icon{
+		font-size:55px;
+		color:#fff;
+		text-decoration: underline;
+	}
+</style>
+<body>
+<div>
+	<h1 class="icon"><i class="fa fa-cutlery"></i></h1>
+	<h1><span class="hover">salt <span class="red">lover</span> chef bae </span></h1>
+	<h3><span class="hover"><span class="pepper">Pilipino </span> cuisine specialty</span></h3>
+	<h4><span class="hover"><span class="courtesy">Courtesy of Ortene</span></h4>
+	<span class="hover"><p class="chef">Chef ortene salt bae ng pinas</p></span>
+	<p class="motto">"May ulam kana may bae kapa"</p>
+</div>
+
+</body>
+</html>
